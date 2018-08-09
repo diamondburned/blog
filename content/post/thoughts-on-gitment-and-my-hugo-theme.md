@@ -28,7 +28,7 @@ Gitment in all its glory
 
 ## My thoughts on Gitment
 
-It's fine, really. It works pretty well for its job. I'm a bit surprised at how my initial joke turned out to be a serious, actually working plugin. Despite that, GitLab compatibility is pretty nice, although you can always use GitLab Pages with a separate GitHub repository.
+It's pretty neat, really. It works well enough for its job. I'm a bit surprised at how my initial joke turned out to be a serious, actually working plugin. Despite that, GitLab compatibility is pretty nice, although you can always use GitLab Pages with a separate GitHub repository.
 
 ## About my own theme
 
@@ -36,3 +36,4 @@ Integration of Gitment with my theme is done, and I did most of the styling alre
 
 P/S: Hip hip hooray, I've stumbled upon another bug! The comments are the same for every post. I'll fix that now.
 
+P/P/S: Fixed it! Pretty darn neat, I'd say.
