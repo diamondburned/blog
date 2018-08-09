@@ -11,20 +11,20 @@
 	
 		
 			<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-	var imported = document.createElement('script');
-	imported.src = "https://imsun.github.io/gitment/dist/gitment.browser.js";
-	document.head.appendChild(imported);
-	const gitment = new Gitment({
-		id: "",
-		owner: "diamondburned",
-		repo: "blog",
-		oauth: {
-			client_id: "13865af1e100e15551ff",
-			client_secret: "7fc933a656f0a9311d7421b5859d657cd4648531",
-		},
-	});
-	gitment.render(document.getElementById('gitment'));
+	function loadgitment() {
+		window.gitment = new Gitment({
+			id: "",
+			owner: "diamondburned",
+			repo: "blog",
+			oauth: {
+				client_id: "13865af1e100e15551ff",
+				client_secret: "7fc933a656f0a9311d7421b5859d657cd4648531",
+			},
+		});
+		window.gitment.render(document.getElementById('gitment'));
+	}
 </script>
 		
 		
@@ -592,7 +592,7 @@ p.footer {
 	</head>
 		
 
-	<body>
+	<body onload="loadgitment()">
 		<nav class="nav">
 			<div class="nav-container">
 				<div class="title">
