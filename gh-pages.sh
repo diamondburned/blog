@@ -7,6 +7,7 @@ elif [[ $1 = "force" ]]; then
 elif [[ $1 = "push" ]]; then
 	git subtree push --prefix public origin gh-pages
 else
+	hugo
 	git add -A
 	git commit -m "$(pwgen 100 1)"
 	git push origin
