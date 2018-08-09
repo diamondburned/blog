@@ -1,0 +1,49 @@
+baseurl = "http://localhost:1313"
+languageCode = "en"
+title = "Burned - a Hugo theme"
+theme = "burned"
+description = "made by diamondburned"
+
+[params]
+	icon = "" # favicon
+	footer = "Made with ~~child labor~~"
+	author = "diamondburned"
+
+[params.tweaks]
+	fonts = ["Source Sans Pro", "Noto Sans", "Helvetica", "Segoe UI"]
+	blend = "false" # blending body with the background
+	stretchbar = "false" # stretching the navbar to fullwidth
+	floatingbar = "true" # makes the bar float
+	darkshadowbar = "false" # use dark shadow instead
+	credits = "true" # show credit
+	fontawesome = "true" # use fontawesome, required for `icon` to work
+
+[params.home] # Homepage
+	text = ""
+	icon = "fas fa-home"
+
+[params.about] # website
+	text = ""
+	icon = "fas fa-info-circle"
+	url = "https://diamondb.xyz/"
+
+# < commenting a block hides its button
+#[params.github]
+#	username = "diamondburned"
+#	text = ""
+#	icon = "fab fa-github"
+
+[params.gitlab]
+	username = "diamondburned"
+	text = ""
+	icon = "fab fa-gitlab"
+
+[params.mail]
+	address = "diamondburned@diamondb.xyz"
+	text = ""
+	icon = "fas fa-envelope"
+
+#[params.twitter]
+#	username = "diamondburned"
+#	text = ""
+#	icon = "fab fa-twitter"
