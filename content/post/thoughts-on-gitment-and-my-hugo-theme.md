@@ -13,11 +13,11 @@ The story is, today, Luke (the guy who requested me to fork Tale), asked me if I
 
 ## How I came up with it
 
-Luke is a Linux user, and like many Linux users, privacy is priority. That alone throws Disqus, Google Comments, et cetera... out the Windows (see that?).
+Luke is a Linux user, and like many Linux users, privacy is priority. That alone throws Disqus, Google Comments, et cetera... out the Windows (see that?). He also didn't have a server ready to act as a backend. After a while, I came up with something.
 
 ## Initially a joke, is now a possible method
 
-I made a joke statement, saying that making a new Git issue and then using that as the comment backend would be nice. Initially it was a joke. But then, a Google search got me [this](https://github.com/imsun/gitment).
+Initially it was a joke statement: I said that making a new Git issue and then using that as the comment backend would be nice. Despite it being a joke, a Google search got me [this](https://github.com/imsun/gitment).
 
 ## Holy #$%&!
 
@@ -28,11 +28,11 @@ Gitment in all its glory
 
 ## My thoughts on Gitment
 
-It's pretty neat, really. It works well enough for its job. I'm a bit surprised at how my initial joke turned out to be a serious, actually working plugin. Despite that, GitLab compatibility is pretty nice, although you can always use GitLab Pages with a separate GitHub repository.
+It's pretty neat, really. It works well enough for its job. I'm a bit surprised at how my initial joke turned out to be a serious, actually working plugin. Despite that, GitLab compatibility would be nice, although you can always use GitLab Pages with a separate GitHub repository.
 
 ## About my own theme
 
-Integration of Gitment with my theme is done, and I did most of the styling already. [The theme can be found here: diamondburned/burned](https://gitlab.com/diamondburned/burned). 
+Integration of Gitment with my theme is done, and I did most of the styling already. [The theme can be found here: gitlab.com@diamondburned/burned](https://gitlab.com/diamondburned/burned). 
 
 P/S: Hip hip hooray, I've stumbled upon another bug! The comments are the same for every post. I'll fix that now.
 
