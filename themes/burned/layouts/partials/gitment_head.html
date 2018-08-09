@@ -1,16 +1,16 @@
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-	var imported = document.createElement('script');
-	imported.src = "https://imsun.github.io/gitment/dist/gitment.browser.js";
-	document.head.appendChild(imported);
-	const gitment = new Gitment({
-		id: "{{ .Site.Params.Gitment.ID }}",
-		owner: "{{ .Site.Params.Gitment.Owner }}",
-		repo: "{{ .Site.Params.Gitment.Repo }}",
-		oauth: {
-			client_id: "{{ .Site.Params.Gitment.OAuth.ID }}",
-			client_secret: "{{ .Site.Params.Gitment.OAuth.Secret }}",
-		},
-	});
-	gitment.render(document.getElementById('gitment'));
+	function loadgitment() {
+		window.gitment = new Gitment({
+			id: "{{ .Site.Params.Gitment.ID }}",
+			owner: "{{ .Site.Params.Gitment.Owner }}",
+			repo: "{{ .Site.Params.Gitment.Repo }}",
+			oauth: {
+				client_id: "{{ .Site.Params.Gitment.OAuth.ID }}",
+				client_secret: "{{ .Site.Params.Gitment.OAuth.Secret }}",
+			},
+		});
+		window.gitment.render(document.getElementById('gitment'));
+	}
 </script>
