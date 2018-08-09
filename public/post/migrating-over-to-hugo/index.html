@@ -62,6 +62,7 @@ div#gitment {
 	box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
 	background-color: rgba(0,0,0,0.75);
 	color: #CCC;
+	line-height: 1.4;
 }
 .gitment-editor-tab {
 	margin-left: 1px;
@@ -74,6 +75,16 @@ div#gitment {
 }
 .gitment-editor-header {
 	border-bottom: transparent;
+}
+.gitment-editor-submit, .gitment-comments-init-btn {
+	background-color: rgba(255,255,255,0.15);
+}
+a.gitment-editor-footer-tip {
+	display: none;
+}
+.gitment-editor-login {
+	margin-top: -45px;
+	margin-right: 5px;
 }
 </style>
 		
@@ -451,6 +462,7 @@ main {
     overflow:auto;
     min-height: 65px;
     background: #1d1d1d;
+    z-index: 1;
 }
 .nav-container {
     margin: 1em auto;
@@ -741,7 +753,7 @@ What looks very simple, is actually bloat</p>
 	</div>
 
 	
-		<div id="gitment"></div>
+		<div id="gitment"><p style="color: gray; font-size: .75em">Working on it...</p></div>
 		<noscript>JavaScript is required for comments to show.</noscript>
 	
 </main>
