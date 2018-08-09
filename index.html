@@ -64,7 +64,7 @@ div#gitment {
 }
 .gitment-editor-body textarea, .gitment-editor-body textarea:focus, .gitment-editor-preview.gitment-markdown {
 	box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
-	background-color: rgba(0,0,0,0.75);
+	background-color: #0E0E0E;
 	color: #CCC;
 	line-height: 1.4;
 }
@@ -96,6 +96,7 @@ a.gitment-editor-footer-tip {
 }
 .gitment-comment-avatar, .gitment-comment-avatar-img, .gitment-comment-avatar, .gitment-editor-avatar-img, .gitment-editor-avatar svg {
 	border-radius: 50%;
+	background: black;
 }
 .gitment-footer-container {
 	margin-top: -20px;
@@ -171,21 +172,18 @@ pre, code {
     font-family: "Noto Mono", monospace;
 }
 code {
-    background-color:#060606;
+    background-color:#0E0E0E;
     border-radius:3px;
     color:#409e95;
     font-size: 0.9em;
     padding: .1em .25em;
     box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
 }
-pre code {
-    box-shadow: none;
-}
 pre {
     margin:0 0 1rem;
     word-wrap: break-word;
     white-space: pre-wrap;
-    background-color: rgba(0,0,0,0.5);
+    background-color: #0E0E0E;
     padding: 1em;
     border-radius: 10px;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.75);
@@ -193,7 +191,8 @@ pre {
 pre code {
     background-color:transparent;
     font-size:0.9em;
-    padding:0
+    padding:0;
+    box-shadow: none;
 }
 .highlight {
     background-color:#060606;
