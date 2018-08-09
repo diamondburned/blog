@@ -1,4 +1,120 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+			
+				<meta name="description" content="Another day with JavaScript is another struggle">
+			
+		
+	
+		
+			<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	function loadgitment() {
+		window.gitment = new Gitment({
+			id: "fuckmylife",
+			owner: "diamondburned",
+			repo: "blog",
+			oauth: {
+				client_id: "13865af1e100e15551ff",
+				client_secret: "7fc933a656f0a9311d7421b5859d657cd4648531",
+			},
+		});
+		
+		window.gitment.render(document.querySelector('#gitment'));
+	}
+</script>
+			<style>
+h2.cmt-header {
+	padding: .5em;
+}
+div#gitment {
+	padding: 1em;
+	padding-top: 0;
+	margin-top: -1em;
+}
+.gitment-container * {
+	color: #AAAAAA;  
+}
+.gitment-comment-main, .gitment-editor-main {
+	border: 0;
+	background: rgba(0,0,0,0.25);
+	padding: .5em
+}
+.gitment-comment-header {
+	background: none;
+	border-radius: 0px;
+	color: #CCC;
+	margin: 0 .5em;
+}
+.gitment-comment-body {
+	margin: 0 .5em;
+	border-radius: 0px;
+}
+.gitment-heart-icon, path.gitment-heart-icon {
+	fill: #CCC;
+}
+.gitment-editor-main::before, .gitment-comment-main::before {
+	border-right-color: rgba(0,0,0,0.25);
+}
+.gitment-editor-main::after, .gitment-comment-main::after {
+	border-right-color: transparent;
+}
+.gitment-editor-body textarea, .gitment-editor-body textarea:focus, .gitment-editor-preview.gitment-markdown {
+	box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
+	background-color: #0E0E0E;
+	color: #CCC;
+	line-height: 1.4;
+}
+.gitment-editor-tab {
+	margin-left: 1px;
+}
+.gitment-editor-tab.gitment-selected {
+	background-color: rgba(0,0,0,0.25);
+	border-color: transparent;
+	border-bottom: none;
+	color: #CCC;
+}
+.gitment-editor-header {
+	border-bottom: transparent;
+}
+.gitment-editor-submit, .gitment-comments-init-btn {
+	background-color: rgba(255,255,255,0.05);
+	color: #CCC;
+}
+.gitment-editor-submit:hover, .gitment-comments-init-btn:hover {
+	background-color: rgba(255,255,255,0.15);
+}
+a.gitment-editor-footer-tip {
+	display: none;
+}
+.gitment-editor-login {
+	margin-top: -45px;
+	margin-right: 5px;
+}
+.gitment-comment-avatar, .gitment-comment-avatar-img, .gitment-comment-avatar, .gitment-editor-avatar-img, .gitment-editor-avatar svg {
+	border-radius: 50%;
+	background: black;
+}
+.gitment-footer-container {
+	margin-top: -20px;
+	margin-bottom: 0px;
+}
+</style>
+		
+		
+		<title>
+			
+				My Hugo theme and thoughts on Gitment &middot; diamondburned&#39;s stupid blog posts
+			
+		</title>
+	
+		
+		<style>
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -522,3 +638,153 @@ p.footer {
     font-weight: 500 !important;
 }
 </style>
+		
+			
+				<style> 
+					html { 
+						font-family: "Source Sans Pro","Noto Sans","Helvetica","Segoe UI",
+								sans-serif, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" 
+					} 
+				</style>
+			
+			
+			
+			
+				<style>
+					.nav {position: fixed; max-width: 800px; width: 100vw;}
+					.if-nav-fixed {max-height: 12vh; height: 8vw;}
+					@media only screen and (max-width: 600px) { .if-nav-fixed {max-height: 22vh; height: 18vh;} }
+				</style>
+			
+			
+			
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+			
+		
+		<link rel="icon" href="/images/icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="diamondburned&#39;s stupid blog posts" />
+
+		
+	</head>
+		
+
+	<body onload="loadgitment()">
+		<nav class="nav">
+			<div class="nav-container">
+				<div class="title">
+					<a href="https://blog.diamondb.xyz/">
+						<h2 class="nav-title">diamondburned&#39;s stupid blog posts</h2>
+					</a>
+				</div>
+				<div class="menu"><h2 class="nav-title">
+					<ul>
+						<li><a href="https://blog.diamondb.xyz">
+							<i class="fas fa-home"></i>
+						</a></li>
+						<li><a href="https://diamondb.xyz/">
+							<i class="fas fa-info-circle"></i>
+						</a></li>
+						
+						
+							<li><a href="https://gitlab.com/diamondburned">
+								<i class="fab fa-gitlab"></i>
+							</a></li>
+						
+						
+							<li><a href="mailto:diamondburned@diamondb.xyz">
+								<i class="fas fa-envelope"></i>
+							</a></li>
+						
+						
+					</ul>
+				</h2></div>
+			</div>
+		</nav>
+		<div class="if-nav-fixed"></div>
+
+<main>
+	<div class="post">
+		<div class="post-info">
+		<span>Written by</span>
+		
+			diamondburned
+		
+
+		
+			<br>
+			<span>on&nbsp;</span><time datetime="2018-08-09 22:46:42 &#43;0700 &#43;07">August 9, 2018</time>
+		
+		</div>
+
+		<h1 class="post-title">My Hugo theme and thoughts on Gitment</h1>
+		<div class="post-line"></div>
+
+		
+
+<h2 id="another-day-with-javascript-is-another-struggle">Another day with JavaScript is another struggle</h2>
+
+<p>I have to say, JavaScript is not a fun language to work on.</p>
+
+<p>The story is, today, Luke (the guy who requested me to fork Tale), asked me if I know of any method to add comments into his Hugo blog. I then thought, &ldquo;hey that&rsquo;d be nice if my theme integrates that.&rdquo; I did just that.</p>
+
+<h2 id="how-i-came-up-with-it">How I came up with it</h2>
+
+<p>Luke is a Linux user, and like many Linux users, privacy is priority. That alone throws Disqus, Google Comments, et cetera&hellip; out the Windows (see that?).</p>
+
+<h2 id="initially-a-joke-is-now-a-possible-method">Initially a joke, is now a possible method</h2>
+
+<p>I made a joke statement, saying that making a new Git issue and then using that as the comment backend would be nice. Initially it was a joke. But then, a Google search got me <a href="https://github.com/imsun/gitment">this</a>.</p>
+
+<h2 id="holy">Holy #$%&amp;!</h2>
+
+<p>It actually took me quite a while. Integrating this was a lot harder than I initially anticipated. After half a whole day (with no energy left), I finally managed to do it.</p>
+
+<p><img src="/images/gitment.png" alt="gitment" />
+Gitment in all its glory</p>
+
+<h2 id="my-thoughts-on-gitment">My thoughts on Gitment</h2>
+
+<p>It&rsquo;s fine, really. It works pretty well for its job. I&rsquo;m a bit surprised at how my initial joke turned out to be a serious, actually working plugin. Despite that, GitLab compatibility is pretty nice, although you can always use GitLab Pages with a separate GitHub repository.</p>
+
+<h2 id="about-my-own-theme">About my own theme</h2>
+
+<p>Integration of Gitment with my theme is done, and I did most of the styling already. <a href="https://gitlab.com/diamondburned/burned">The theme can be found here: diamondburned/burned</a>.</p>
+
+<p>P/S: Hip hip hooray, I&rsquo;ve stumbled upon another bug! The comments are the same for every post. I&rsquo;ll fix that now.</p>
+
+
+	</div>
+
+	
+		<h2 class="cmt-header">Comments</h2>
+<div id="gitment">
+	
+</div>
+		<noscript>JavaScript is required for comments to show.</noscript>
+	
+</main>
+
+<div class="pagination">
+	
+	<a href="/post/migrating-over-to-hugo/" class="left arrow">&#8592;</a>
+	
+	
+
+	<a href="#" class="top">Top</a>
+</div>
+		<footer>
+			<span>
+				<p class="footer">Discord: <code>_diamondburned_#4507</code></p>
+				
+  					
+  						<p class="footer credits">
+  							<a href="https://gitlab.com/diamondburned/burned/">Theme made by diamondburned</a>, powered by <a href="https://gohugo.io/">Hu<strong>go</strong></a>
+  						</p>
+  					
+  				
+			</span>
+		</footer>
+  </body>
+</html>

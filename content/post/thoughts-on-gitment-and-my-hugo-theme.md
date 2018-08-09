@@ -1,7 +1,8 @@
 ---
 title: "My Hugo theme and thoughts on Gitment"
+description: "Another day with JavaScript is another struggle"
 date: 2018-08-09T22:46:42+07:00
-draft: true
+draft: false
 ---
 
 ## Another day with JavaScript is another struggle
@@ -22,7 +23,16 @@ I made a joke statement, saying that making a new Git issue and then using that 
 
 It actually took me quite a while. Integrating this was a lot harder than I initially anticipated. After half a whole day (with no energy left), I finally managed to do it.
 
+![gitment](/images/gitment.png)
+Gitment in all its glory
 
+## My thoughts on Gitment
 
+It's fine, really. It works pretty well for its job. I'm a bit surprised at how my initial joke turned out to be a serious, actually working plugin. Despite that, GitLab compatibility is pretty nice, although you can always use GitLab Pages with a separate GitHub repository.
 
+## About my own theme
+
+Integration of Gitment with my theme is done, and I did most of the styling already. [The theme can be found here: diamondburned/burned](https://gitlab.com/diamondburned/burned). 
+
+P/S: Hip hip hooray, I've stumbled upon another bug! The comments are the same for every post. I'll fix that now.
 
