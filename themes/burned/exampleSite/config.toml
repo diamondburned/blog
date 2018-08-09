@@ -47,3 +47,13 @@ description = "made by diamondburned"
 #	username = "diamondburned"
 #	text = ""
 #	icon = "fab fa-twitter"
+
+# v This __REQUIRES__ JavaScript. Comment the ENTIRE BLOCK if you don't like it.
+[params.gitment] # https://github.com/imsun/gitment#get-started
+	id = "" # a second tag, REQUIRED
+	owner = "" # github username
+	repo = "" # repo to make issues on, should be public
+
+	[params.gitment.oauth] # https://github.com/settings/applications/new
+		id = "" # your oauth ID
+		secret = "" # your oauth secret

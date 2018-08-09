@@ -1,6 +1,6 @@
 # burned
 
-A fork from the Tale theme for Hugo, featuring extra polished features.
+A fork from the Tale theme for Hugo, featuring extra polished features which includes but not limited to Gitment, social buttons and extra customizability.
 
 ### Credits
 
