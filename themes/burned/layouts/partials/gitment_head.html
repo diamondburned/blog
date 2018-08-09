@@ -10,5 +10,5 @@
 			client_secret: "{{ .Site.Params.Gitment.OAuth.Secret }}",
 		},
 	});
-	gitment.render(document.querySelector('.gitment').innerHTML);
+	gitment.render(document.getElementById('gitment'));
 </script>
