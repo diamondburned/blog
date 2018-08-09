@@ -6,10 +6,21 @@
     <description>Recent content in Posts on diamondburned&#39;s stupid blog posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Aug 2018 18:38:36 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 09 Aug 2018 22:46:42 +0700</lastBuildDate>
     
 	<atom:link href="https://blog.diamondb.xyz/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Hugo theme and thoughts on Gitment</title>
+      <link>https://blog.diamondb.xyz/post/thoughts-on-gitment-and-my-hugo-theme/</link>
+      <pubDate>Thu, 09 Aug 2018 22:46:42 +0700</pubDate>
+      
+      <guid>https://blog.diamondb.xyz/post/thoughts-on-gitment-and-my-hugo-theme/</guid>
+      <description>Another day with JavaScript is another struggle I have to say, JavaScript is not a fun language to work on.
+The story is, today, Luke (the guy who requested me to fork Tale), asked me if I know of any method to add comments into his Hugo blog. I then thought, &amp;ldquo;hey that&amp;rsquo;d be nice if my theme integrates that.&amp;rdquo; I did just that.
+How I came up with it Luke is a Linux user, and like many Linux users, privacy is priority.</description>
+    </item>
     
     <item>
       <title>Migrating over to Hugo</title>
