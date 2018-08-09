@@ -12,8 +12,10 @@
 	
 		
 			<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+	var imported = document.createElement('script');
+	imported.src = "https://imsun.github.io/gitment/dist/gitment.browser.js";
+	document.head.appendChild(imported);
 	const gitment = new Gitment({
 		id: "",
 		owner: "diamondburned",
@@ -582,7 +584,7 @@ p.footer {
 				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 			
 		
-		<link rel="icon" href="images/icon.png">
+		<link rel="icon" href="/images/icon.png">
 
 		
 		<link href="" rel="alternate" type="application/rss+xml" title="diamondburned&#39;s stupid blog posts" />

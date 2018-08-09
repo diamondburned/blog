@@ -5,7 +5,7 @@ theme = "burned"
 description = "where I shitpost"
 
 [params]
-	icon = "images/icon.png" # favicon
+	icon = "/images/icon.png" # favicon
 	footer = "Discord: `_diamondburned_#4507`"
 	author = "diamondburned"
 

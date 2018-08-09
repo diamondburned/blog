@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
+	var imported = document.createElement('script');
+	imported.src = "https://imsun.github.io/gitment/dist/gitment.browser.js";
+	document.head.appendChild(imported);
 	const gitment = new Gitment({
 		id: "{{ .Site.Params.Gitment.ID }}",
 		owner: "{{ .Site.Params.Gitment.Owner }}",
