@@ -28,8 +28,13 @@
 	}
 </script>
 			<style>
+h2.cmt-header {
+	padding: .5em;
+}
 div#gitment {
 	padding: 1em;
+	padding-top: 0;
+	margin-top: -1em;
 }
 .gitment-container * {
 	color: #AAAAAA;  
@@ -37,7 +42,7 @@ div#gitment {
 .gitment-comment-main, .gitment-editor-main {
 	border: 0;
 	background: rgba(0,0,0,0.25);
-    padding: .5em
+	padding: .5em
 }
 .gitment-comment-header {
 	background: none;
@@ -77,6 +82,10 @@ div#gitment {
 	border-bottom: transparent;
 }
 .gitment-editor-submit, .gitment-comments-init-btn {
+	background-color: rgba(255,255,255,0.05);
+	color: #CCC;
+}
+.gitment-editor-submit:hover, .gitment-comments-init-btn:hover {
 	background-color: rgba(255,255,255,0.15);
 }
 a.gitment-editor-footer-tip {
@@ -88,6 +97,10 @@ a.gitment-editor-footer-tip {
 }
 .gitment-comment-avatar, .gitment-comment-avatar-img, .gitment-comment-avatar, .gitment-editor-avatar-img, .gitment-editor-avatar svg {
 	border-radius: 50%;
+}
+.gitment-footer-container {
+	margin-top: -20px;
+	margin-bottom: 0px;
 }
 </style>
 		
@@ -756,7 +769,10 @@ What looks very simple, is actually bloat</p>
 	</div>
 
 	
-		<div id="gitment"><p style="color: gray; font-size: .75em">Working on it...</p></div>
+		<h2 class="cmt-header">Comments</h2>
+<div id="gitment">
+	<p style="color: gray; font-size: .75em">Working on it...</p>
+</div>
 		<noscript>JavaScript is required for comments to show.</noscript>
 	
 </main>
