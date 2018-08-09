@@ -49,7 +49,7 @@ description = "where I shitpost"
 
 # v This __REQUIRES__ JavaScript
 [params.gitment] # https://github.com/imsun/gitment#get-started
-	id = "fuckmylife" # page ID, optional
+	id = "fuckmylife" # page ID, REQUIRED
 	owner = "diamondburned"
 	repo = "blog"
 
