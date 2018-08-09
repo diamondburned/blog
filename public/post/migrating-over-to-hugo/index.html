@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
@@ -569,10 +569,27 @@ p.footer {
 
 		
 		<link href="" rel="alternate" type="application/rss+xml" title="diamondburned&#39;s stupid blog posts" />
+
+		
+			<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script type="">
+	const gitment = new Gitment({
+		id: "", // optional
+		owner: "",
+		repo: "",
+		oauth: {
+			client_id: "",
+			client_secret: "",
+		},
+	});
+	gitment.render(document.getElementById('gitment'));
+</script>
+		
 	</head>
 		
 
-  <body>
+	<body>
 		<nav class="nav">
 			<div class="nav-container">
 				<div class="title">
@@ -669,6 +686,10 @@ What looks very simple, is actually bloat</p>
 
 
 	</div>
+
+	
+		<div id="gitment"></div>
+	
 </main>
 
 <div class="pagination">

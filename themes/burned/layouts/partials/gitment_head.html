@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	const gitment = new Gitment({
+		id: "{{ .Site.Params.Gitment.ID }}",
+		owner: "{{ .Site.Params.Gitment.Owner }}",
+		repo: "{{ .Site.Params.Gitment.Repo }}",
+		oauth: {
+			client_id: "{{ .Site.Params.Gitment.OAuth.ID }}",
+			client_secret: "{{ .Site.Params.Gitment.OAuth.Secret }}",
+		},
+	});
+	gitment.render(document.querySelector('.gitment').innerHTML);
+</script>

@@ -46,3 +46,13 @@ description = "where I shitpost"
 #	username = "diamondburned"
 #	text = ""
 #	icon = "fab fa-twitter"
+
+# v This __REQUIRES__ JavaScript
+[params.gitment] # https://github.com/imsun/gitment#get-started
+	id = "" # page ID, optional
+	owner = "diamondburned"
+	repo = "blog"
+
+	[params.gitment.oauth]
+		id = "13865af1e100e15551ff"
+		secret = "7fc933a656f0a9311d7421b5859d657cd4648531"

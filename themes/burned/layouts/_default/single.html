@@ -22,6 +22,11 @@
 		{{ .Content }}
 
 	</div>
+
+	{{ if isset .Site.Params "gitment" }}
+		{{ partial "gitment.html" . }}
+		<noscript>JavaScript is required for comments to show.</noscript>
+	{{ end }}
 </main>
 
 <div class="pagination">
