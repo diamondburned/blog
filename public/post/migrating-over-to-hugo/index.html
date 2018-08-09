@@ -24,7 +24,8 @@
 				client_secret: "7fc933a656f0a9311d7421b5859d657cd4648531",
 			},
 		});
-		window.gitment.render(document.getElementById('gitment'));
+		
+		document.querySelector('#gitment').innerHTML = window.gitment.render();
 	}
 </script>
 			<style>
