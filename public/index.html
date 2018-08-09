@@ -26,6 +26,55 @@
 		window.gitment.render(document.getElementById('gitment'));
 	}
 </script>
+			<style>
+div#gitment {
+	padding: 1em;
+}
+.gitment-container * {
+	color: #AAAAAA;  
+}
+.gitment-comment-main, .gitment-editor-main {
+	border: 0;
+	background: rgba(0,0,0,0.25);
+    padding: .5em
+}
+.gitment-comment-header {
+	background: none;
+	border-radius: 0px;
+	color: #CCC;
+	margin: 0 .5em;
+}
+.gitment-comment-body {
+	margin: 0 .5em;
+	border-radius: 0px;
+}
+.gitment-heart-icon, path.gitment-heart-icon {
+	fill: #CCC;
+}
+.gitment-editor-main::before, .gitment-comment-main::before {
+	border-right-color: rgba(0,0,0,0.25);
+}
+.gitment-editor-main::after, .gitment-comment-main::after {
+	border-right-color: transparent;
+}
+.gitment-editor-body textarea, .gitment-editor-body textarea:focus, .gitment-editor-preview.gitment-markdown {
+	box-shadow: inset 0px 0px 3px rgba(0,0,0,0.75);
+	background-color: rgba(0,0,0,0.75);
+	color: #CCC;
+}
+.gitment-editor-tab {
+	margin-left: 1px;
+}
+.gitment-editor-tab.gitment-selected {
+	background-color: rgba(0,0,0,0.25);
+	border-color: transparent;
+	border-bottom: none;
+	color: #CCC;
+}
+.gitment-editor-header {
+	border-bottom: transparent;
+}
+</style>
 		
 		
 		<title>

@@ -11,6 +11,7 @@
 	
 		{{ if isset .Site.Params "gitment" }}
 			{{ partial "gitment_head.html" . }}
+			{{ partial "gitment_css.html" . }}
 		{{ end }}
 		
 		<title>
