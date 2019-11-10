@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #git pull origin master
 if [[ $1 = "pull" ]]; then
 	git subtree pull --prefix public origin gh-pages
@@ -7,9 +7,11 @@ elif [[ $1 = "force" ]]; then
 elif [[ $1 = "push" ]]; then
 	git subtree push --prefix public origin gh-pages
 else
+	 [[ $1 ]] || { echo "Empty commit message" && exit; }
+
 	hugo
 	git add -A
-	git commit -m "$(pwgen 100 1)"
+	git commit -m "$1"
 	git push origin
 	git subtree push --prefix public origin gh-pages
 fi
