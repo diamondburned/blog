@@ -51,7 +51,7 @@ description = "where I shitpost"
 [params.gitment] # https://github.com/imsun/gitment#get-started
 	#id = "fuckmylife" # page ID, REQUIRED
 	owner = "diamondburned"
-	repo = "blog-comments"
+	repo = "blog"
 
 	[params.gitment.oauth]
 		id = "13865af1e100e15551ff"
