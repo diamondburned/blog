@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 			
-				<meta name="description" content="My experiences, opinions and things I achieved">
+				<meta name="description" content="Making an image uploader and browser server with the cleanest stack ever">
 			
 		
 	
@@ -109,7 +109,7 @@ a.gitment-editor-footer-tip {
 		
 		<title>
 			
-				Migrating over to Hugo &middot; diamondburned&#39;s stupid blog posts
+				Image uploader/browser with only Caddy &middot; diamondburned&#39;s stupid blog posts
 			
 		</title>
 	
@@ -714,56 +714,132 @@ p.footer {
 
 		
 			<br>
-			<span>on&nbsp;</span><time datetime="2018-08-07 18:38:36 &#43;0700 &#43;0700">August 7, 2018</time>
+			<span>on&nbsp;</span><time datetime="2019-11-10 10:56:17 -0800 PST">November 10, 2019</time>
 		
 		</div>
 
-		<h1 class="post-title">Migrating over to Hugo</h1>
+		<h1 class="post-title">Image uploader/browser with only Caddy</h1>
 		<div class="post-line"></div>
 
 		
 
-<h2 id="migrating-over-to-hugo-is-very-easy">&ldquo;Migrating over to Hugo is very easy.&rdquo;</h2>
+<h2 id="prelude">Prelude</h2>
 
-<p>This was my thought when I first make <a href="https://butterfly.diamondb.xyz/">a document for my bot</a>. I was astonished by the speed of it. I was able to edit the markdown pages and instantly preview it when I need to. The theme I used was very flexible, and although I had trouble with the Hugo template, I quickly got used to it and changed most of the theme.</p>
+<p>Recently a lot of people have been asking me about setting up a file server, mainly to serve their screenshots. As I have helped one of my friends set up his, I will put that into a clean guide in this blog post.</p>
 
-<p>I then promoted Hugo, telling everyone to switch to Hugo, as it is superior to everything. You know, the typical fanboy stuff. And then it came to me when someone asked me to help them.</p>
+<h2 id="why-caddy">Why Caddy?</h2>
 
-<h2 id="so-what-really-happened">So what really happened?</h2>
+<p>When people asked me about methods to do this, they always get creative. Some thought an <code>rsync</code> + NGINX stack would be nice, others suggested a Node.JS application to go along. One even suggested me to use PHP applications with Apache.</p>
 
-<p>Initially I chose a theme named Kiss. Very simple looking. &ldquo;Perfect!&rdquo;, I thought, &ldquo;It&rsquo;s a very simple looking theme, the CSS has to be simple too, right?&rdquo; I had this mindset until the moment I actually opened the CSS file did I realise it&rsquo;s almost 6000 lines long!</p>
+<p>So why Caddy? Caddy acts as a web server, similarly to NGINX. However, it has Let&rsquo;s Encrypt built in, no longer needing <code>certbot</code>. It has WebDAV as a clean extension, no longer needing any PHP/Node.JS application as an uploader. Finally, Caddy has a clean and small config syntax.</p>
 
-<p><img src="/images/kiss_bloat.png" alt="What looks very simple, is actually bloat" />
-What looks very simple, is actually bloat</p>
+<h2 id="requirements">Requirements</h2>
 
-<h2 id="this-means-hugo-themes-are-crappy-and-i-should-stick-to-my-bash-static-page-generator-right">This means Hugo themes are crappy and I should stick to my Bash static page generator, right?</h2>
+<p>In this blog post (guide), I&rsquo;ll assume the target server runs on Ubuntu, which means it would use systemd for service management. Obviously, if the target server runs on NixOS, things would&rsquo;ve been easier.</p>
 
-<p>No wait! Before you move back to that Bash static page generator, let me tell the rest of my story.</p>
+<p>Some more obvious requirements would be an internet connection, a domain, and a static IP.</p>
 
-<p>Another guy I was helping was using a theme called &ldquo;Tale&rdquo;, which was ported over from Jekyll. A very simple looking theme, even simpler-looking than Kiss. Now this couldn&rsquo;t get any simpler, right? Wrong. What greeted me was a <code>scss</code> file linking to several other different <code>scss</code> files. No problem, I can just edit them, right? Again, wrong! Hugo wasn&rsquo;t using any of that, but it was taking CSS from an already generated file! To top things off, you can&rsquo;t make Hugo generate SCSS!</p>
+<h3 id="precaution">Precaution</h3>
 
-<pre><code>Building sites … ERROR 2018/08/07 17:23:39 error: failed to transform resource: TOCSS: failed to transform &quot;scss/tale.scss&quot; (text/x-scss): this feature is not available in your current Hugo version
+<p>This guide assumes installation into the user home directory, not the system directory. If your server hosts multiple web applications on different users, this guide is <em>not</em> for you.</p>
+
+<h2 id="1-creating-the-folders-needed">1. Creating the folders needed</h2>
+
+<pre><code class="language-sh">mkdir ~/Pictures # The directory that pictures will go, our www root
 </code></pre>
 
-<h2 id="still-means-hugo-is-crappy-right">Still means Hugo is crappy, right?</h2>
+<h2 id="2-getting-caddy">2. Getting Caddy</h2>
 
-<p>Nope! But just let me finish my story first, alright?</p>
+<pre><code class="language-sh"># Since we need a Caddy with WebDAV for file uploads, we'll install Caddy with
+# WebDAV. This script should put Caddy in /usr/bin.
+curl https://getcaddy.com | bash -s personal http.webdav
+</code></pre>
 
-<p>After that happened, I went to the AUR and grabbed a package called <code>python2-pyscss</code> which compiles SCSS files into one CSS file. I then put that in Stylus to Beautify it and started tinkering around with it. First, I tidied up the CSS code. Then, I added my own styles. Finally, I added extra codes into the body to add more features, such as social network buttons, the one you can see on the top right.</p>
+<h2 id="3-setting-up-caddy-as-a-systemd-service">3. Setting up Caddy as a systemd service</h2>
 
-<h2 id="wait-a-minute-you-re-just-plugging-your-theme">Wait a minute! You&rsquo;re just plugging your theme!</h2>
+<p>This file goes to <code>/etc/systemd/system/caddy.service</code>. <strong>Replace properties underneath &ldquo;REPLACE ME&rdquo;</strong> for this to work.</p>
 
-<p>Congratulations, you realized!</p>
+<pre><code class="language-ini">[Unit]
+Description=Caddy HTTP/2 web server
+Documentation=https://caddyserver.com/docs
+After=network-online.target
+Wants=network-online.target
 
-<p>Just joking, I didn&rsquo;t really mean to plug my own theme. I just couldn&rsquo;t find any theme that suited my needs, so I decided to go with the simplest theme I could find, which turns out to be even more complicated than I thought!</p>
+[Service]
+;REPLACE ME
+User=$username
+Group=$groupname
+WorkingDirectory=/home/$username
+ReadWriteDirectories=/home/$username
+Environment=CADDYPATH=./.caddy
 
-<h2 id="conclusion">Conclusion</h2>
+;Do not change these
+ExecStart=/usr/local/bin/caddy -log stderr -agree=true -conf=./Caddyfile -root=./.caddy
+ExecReload=/bin/kill -USR1 $MAINPID
+Restart=on-failure
+LimitNOFILE=1048576
+</code></pre>
 
-<p>Hugo is great, it&rsquo;s fast and all. Theming it is a disaster, however, as I had to make my own theme. Once I nailed that down though, everything worked fine.</p>
+<h3 id="reloading-systemd-services">Reloading systemd services</h3>
 
-<h2 id="what-i-made">What I made</h2>
+<pre><code class="language-sh">sudo systemctl daemon-reload
+</code></pre>
 
-<p>Currently, I&rsquo;m working on a theme, and this blog right now is using it. I&rsquo;ll publicize this once I find it to be customizable enough. For now, I&rsquo;ll be working on it.</p>
+<h2 id="4-configure-caddy">4. Configure Caddy</h2>
+
+<p>For this section, we&rsquo;ll assume your domain is <code>example.com</code>. <code>i.example.com</code> would serve images, which would be CloudFlare protected. <code>d.example.com</code> would not be CloudFlare protected, as <a href="https://github.com/cloudflare/cloudflared/issues/69">CloudFlare breaks WebDAV</a>.</p>
+
+<p>This file goes to <code>~/Caddyfile</code>. <strong>Replace variables such as</strong> <code>$username</code> for this to work. This username and password is only used for uploading.</p>
+
+<pre><code>i.example.com {
+    root ./Pictures
+    gzip
+    browse
+}
+
+d.example.com {
+    basicauth / $username $password
+    webdav / {
+       scope ./Pictures/
+    }
+}
+</code></pre>
+
+<h2 id="5-start-caddy-up">5. Start Caddy up</h2>
+
+<pre><code class="language-sh">sudo systemctl start caddy
+</code></pre>
+
+<h2 id="testing-caddy">Testing Caddy</h2>
+
+<p>At this point, <code>i.example.com</code> should return you a webpage under HTTPS.</p>
+
+<h2 id="troubleshooting-caddy">Troubleshooting Caddy</h2>
+
+<p>To access Caddy logs, do <code>sudo journalctl -u caddy</code>.</p>
+
+<h2 id="uploading-screenshots">Uploading screenshots</h2>
+
+<h3 id="curl-example-username-and-password"><code>curl</code> example - <code>$username</code> and <code>$password</code></h3>
+
+<pre><code class="language-sh">curl --basic --user &quot;$username:$password&quot; -T $FILE_PATH https://d.example.com/
+</code></pre>
+
+<p>More advanced usages at <a href="https://code.blogs.iiidefix.net/posts/webdav-with-curl/">https://code.blogs.iiidefix.net/posts/webdav-with-curl/</a></p>
+
+<h3 id="sharex-username-and-password">ShareX - <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code></h3>
+
+<pre><code class="language-json">{
+  &quot;DestinationType&quot;: &quot;ImageUploader, FileUploader&quot;,
+  &quot;RequestMethod&quot;: &quot;PUT&quot;,
+  &quot;RequestURL&quot;: &quot;https://d.example.com/$filename$&quot;,
+  &quot;Body&quot;: &quot;Binary&quot;,
+  &quot;Headers&quot;: {
+    &quot;Authorization&quot;: &quot;Basic $base64:&lt;username&gt;:&lt;password&gt;$&quot;
+  },
+  &quot;URL&quot;: &quot;https://i.example.com/$filename$&quot;
+}
+</code></pre>
 
 
 	</div>
@@ -779,8 +855,8 @@ What looks very simple, is actually bloat</p>
 
 <div class="pagination">
 	
-	<a href="/post/thoughts-on-gitment-and-my-hugo-theme/" class="left arrow">&#8592;</a>
 	
+	<a href="/post/thoughts-on-gitment-and-my-hugo-theme/" class="right arrow">&#8594;</a>
 	
 
 	<a href="#" class="top">Top</a>
