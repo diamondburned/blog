@@ -1,7 +1,6 @@
 ---
 title: "Migrating over to Hugo"
 description: "My experiences, opinions and things I achieved"
-author: ""
 date: 2018-08-07T18:38:36+07:00
 draft: false
 ---

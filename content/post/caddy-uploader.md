@@ -1,7 +1,6 @@
 ---
 title: "Image uploader/browser with only Caddy"
 description: "Making an image uploader and browser server with the cleanest stack ever"
-author: ""
 date: 2019-11-10T10:56:17-08:00
 draft: false
 ---
